@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>计算机科学与技术学院</title>
+    <meta name="keywords" content="上海电力学院 计算机科学与技术学院">
+    <meta name="description" content="上海电力学院 计算机科学与技术学院">
+    
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet">
+<link type="text/css" href="/_upload/site/1/style/23/23.css" rel="stylesheet">
+<link type="text/css" href="/_upload/site/00/34/52/style/98/98.css" rel="stylesheet">
+       <link href="/_css/tpl2/system.css" type="text/css" rel="stylesheet"> 
+       <link href="/_css/tpl2/default/default.css" type="text/css" rel="stylesheet"> 
+<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet">
+<link type="text/css" href="/_js/_portletPlugs/sudyNavi/css/sudyNav.css" rel="stylesheet">
+
+<script language="javascript" src="/_js/jquery.min.js" sudy-wp-context="" sudy-wp-siteid="52"></script>
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/sudyNavi/jquery.sudyNav.js"></script>
+<link href="/_upload/tpl/00/83/131/template131/htmlRes/index3.css" rel="stylesheet" type="text/css">
+    <link href="/_upload/tpl/00/83/131/template131/htmlRes/common2.css" rel="stylesheet" type="text/css">
+     <style type="text/css">
+        
+        .nav1 ul
+        {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        .nav1 ul li
+        {
+            float: left;
+            position: relative;
+        }
+        .nav1 ul li a, .nav1 ul li a:visited
+        {
+            display: block;
+            font-weight:bolder;
+        }
+        .nav1 ul li ul
+        {
+            display: none;
+        }
+       
+        .nav1 ul li:hover ul
+        {
+            display: block;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            _left: 27px;
+            width: 105px;
+        }
+        .nav1 ul li:hover ul li a
+        {
+            display: block;
+           
+        }
+        
+    </style>
+     <!--[if lte IE 6]>
+       <style type="text/css">
+       body {behavior:url("/_upload/tpl/00/83/131/template131/htmlRes/csshover.htc");}
+       </style>
+     <![endif]-->
+<link rel="stylesheet" type="text/css" href="/_upload/tpl/00/83/131/template131/htmlRes/logo.css">
+     
+     <script src="/_upload/tpl/00/83/131/template131/htmlRes/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
+   
+ <script type="text/javascript">
+        $(function(){
+	        $("#KinSlideshow").KinSlideshow();
+        })
+    </script>
+<script type="text/javascript">
+		//banner图片切换
+            var theInt = null;
+            var $crosslink, $crosslen;
+            var curclicked = 0;
+            theInterval = function(cur){
+                    clearInterval(theInt);
+                    if( typeof cur != 'undefined' ){
+                            alert
+                            if (cur == $crosslen)  cur =0;
+                            if (cur == -1)  cur = $crosslen-1;
+                            curclicked = cur;
+                            $(".banner .banner_img").css('display','none');
+                            $(".banner .banner_img").eq(curclicked).fadeIn("slow");
+                    }
+
+                    $crosslink.removeClass("active-thumb");
+                    $crosslink.eq(curclicked).addClass("active-thumb");
+                    curclicked++;
+                if( $crosslen == curclicked ){ curclicked = 0;}
+
+                    theInt = setInterval(function(){
+                            $crosslink.removeClass("active-thumb");
+                            $crosslink.eq(curclicked).addClass("active-thumb");
+                            $(".banner .banner_img").css('display','none');
+                            $(".banner .banner_img").eq(curclicked).fadeIn("slow");
+                            curclicked++;
+                            if( $crosslen == curclicked ){ curclicked = 0;}
+                    }, 3000);
+            };
+            $(function(){
+                    $(".banner .banner_img").css('display','none');
+                    $(".banner .banner_img").eq(0).css("display","block");
+                    $crosslink = $(".cross-link");
+                    $crosslen = $crosslink.length;
+                    $crosslink.hover(function() {
+                            var $this = $(this);
+                            theInterval($this.attr('name')- 1);
+                            return false;
+                    });
+                    $(".leftbutton").click(function(){
+                            theInterval($(".active-thumb").attr('name')-2);
+                    })
+                    $(".rightbutton").click(function(){
+                            theInterval($(".active-thumb").attr('name'));
+                    })
+
+                    theInterval();
+                });
+			
+        </script>
+    <script language="javascript" type="text/javascript" src="/_upload/tpl/00/83/131/template131/extends/extends.js"></script><link rel="stylesheet" type="text/css" href="/_upload/tpl/00/83/131/template131/extends/extends.css"><script type="text/javascript" src="/_upload/tpl/00/83/131/template131/extends/libs/jquery.sudy.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/_upload/tpl/00/83/131/template131/extends/extends_init.js"></script>
+    <link rel="stylesheet" type="text/css" href="/_upload/tpl/00/83/131/template131/htmlRes/style.css">
+</head>
+<body>
+    <div class="topbox">
+        <div style="float:right;height:20px;padding-top:5px">
+              <a href="http://jsjxy.shiep.edu.cn/" onclick="window.external.AddFavorite(document.URL,document.title);">加入收藏</a>
+              &nbsp;
+              <a href="http://jsjxy.shiep.edu.cn/" onclick="this.style.behavior='url(http://jsjxy.shiep.edu.cn/#default#homepage)';this.setHomePage(document.URL);">设为首页</a>
+        </div>
+        <div class="logo m_top">
+            
+            <div class="logo_left">
+                <img src="/_upload/tpl/00/83/131/template131/htmlRes/logo.jpg">
+            </div>
+            
+        </div>
+         <div style="clear:both"></div>
+        <div class="nav1" frag="面板201">
+          <div frag="窗口201">
+            <div id="wp_nav_w201"> 
+  
+            
+            <ul>
+                
+                <li id="mainlevel_i1" class="mainlevel i1">
+                  <a href="/main.htm" target="_self">首页</a>
+                  
+                </li>
+                
+                <li id="mainlevel_i2" class="mainlevel i2">
+                  <a href="/961/list.htm" target="_self">学院概况</a>
+                  
+                  <ul id="sub_{级别样式}">
+                    
+                    <li><a href="/974/list.htm" target="_self">学院简介</a></li>
+                    
+                    <li><a href="/975/list.htm" target="_self">学院领导</a></li>
+                    
+                    <li><a href="/976/list.htm" target="_self">组织机构</a></li>
+                    
+                    <li><a href="/977/list.htm" target="_self">学院办公室</a></li>
+                    
+                    <li><a href="/978/list.htm" target="_self">学院工会</a></li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li id="mainlevel_i3" class="mainlevel i3">
+                  <a href="/962/list.htm" target="_self">系部中心</a>
+                  
+                  <ul id="sub_{级别样式}">
+                    
+                    <li><a href="/979/list.htm" target="_self">计算机系</a></li>
+                    
+                    <li><a href="/980/list.htm" target="_self">软件工程系</a></li>
+                    
+                    <li><a href="/981/list.htm" target="_self">信息安全系</a></li>
+                    
+                    <li><a href="/982/list.htm" target="_self">实验中心</a></li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li id="mainlevel_i4" class="mainlevel i4">
+                  <a href="/963/list.htm" target="_self">师资队伍</a>
+                  
+                  <ul id="sub_{级别样式}">
+                    
+                    <li><a href="/983/list.htm" target="_self">师资概况</a></li>
+                    
+                    <li><a href="/984/list.htm" target="_self">东方学者</a></li>
+                    
+                    <li><a href="/985/list.htm" target="_self">教师名录</a></li>
+                    
+                    <li><a href="/986/list.htm" target="_self">人才引进</a></li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li id="mainlevel_i5" class="mainlevel i5">
+                  <a href="/964/list.htm" target="_self">本科教学</a>
+                  
+                  <ul id="sub_{级别样式}">
+                    
+                    <li><a href="/987/list.htm" target="_self">教务通知</a></li>
+                    
+                    <li><a href="/988/list.htm" target="_self">专业介绍</a></li>
+                    
+                    <li><a href="/989/list.htm" target="_self">培养方案</a></li>
+                    
+                    <li><a href="/990/list.htm" target="_self">课程设置</a></li>
+                    
+                    <li><a href="/991/list.htm" target="_self">教学成果</a></li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li id="mainlevel_i6" class="mainlevel i6">
+                  <a href="/965/list.htm" target="_self">研究生</a>
+                  
+                  <ul id="sub_{级别样式}">
+                    
+                    <li><a href="/973/list.htm" target="_self">通知公告</a></li>
+                    
+                    <li><a href="/992/list.htm" target="_self">专业介绍</a></li>
+                    
+                    <li><a href="/993/list.htm" target="_self">培养方案</a></li>
+                    
+                    <li><a href="/994/list.htm" target="_self">导师名录</a></li>
+                    
+                    <li><a href="/995/list.htm" target="_self">调剂信息</a></li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li id="mainlevel_i7" class="mainlevel i7">
+                  <a href="/966/list.htm" target="_self">科学研究</a>
+                  
+                  <ul id="sub_{级别样式}">
+                    
+                    <li><a href="/996/list.htm" target="_self">科研动态</a></li>
+                    
+                    <li><a href="/997/list.htm" target="_self">科研论著</a></li>
+                    
+                    <li><a href="/998/list.htm" target="_self">科研团队</a></li>
+                    
+                    <li><a href="/999/list.htm" target="_self">科研成果</a></li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li id="mainlevel_i8" class="mainlevel i8">
+                  <a href="/967/list.htm" target="_self">学生工作</a>
+                  
+                  <ul id="sub_{级别样式}">
+                    
+                    <li><a href="/1000/list.htm" target="_self">机构设置</a></li>
+                    
+                    <li><a href="/1001/list.htm" target="_self">学工动态</a></li>
+                    
+                    <li><a href="/1039/list.htm" target="_self">通知公告</a></li>
+                    
+                    <li><a href="/1002/list.htm" target="_self">规章制度</a></li>
+                    
+                    <li><a href="/1003/list.htm" target="_self">办事流程</a></li>
+                    
+                    <li><a href="/1004/list.htm" target="_self">招聘信息</a></li>
+                    
+                    <li><a href="/1005/list.htm" target="_self">学生科创</a></li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li id="mainlevel_i9" class="mainlevel i9">
+                  <a href="/968/list.htm" target="_self">党务公开</a>
+                  
+                  <ul id="sub_{级别样式}">
+                    
+                    <li><a href="http://dwgk.shiep.edu.cn/" target="_self">党务公开网</a></li>
+                    
+                    <li><a href="/1007/list.htm" target="_self">基层党建</a></li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li id="mainlevel_i10" class="mainlevel i10">
+                  <a href="/969/list.htm" target="_self">实验中心</a>
+                  
+                  <ul id="sub_{级别样式}">
+                    
+                    <li><a href="/1008/list.htm" target="_self">中心简介</a></li>
+                    
+                    <li><a href="/1009/list.htm" target="_self">机构设置</a></li>
+                    
+                    <li><a href="/1010/list.htm" target="_self">设备管理</a></li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li id="mainlevel_i11" class="mainlevel i11">
+                  <a href="/970/list.htm" target="_self">毕业设计</a>
+                  
+                  <ul id="sub_{级别样式}">
+                    
+                    <li><a href="http://210.35.95.13/graduate/login/index.asp" target="_self">公告通知</a></li>
+                    
+                    <li><a href="http://210.35.95.13/graduate/login/index.asp" target="_self">毕业选题</a></li>
+                    
+                    <li><a href="/1013/list.htm" target="_self">规章制度</a></li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li id="mainlevel_i12" class="mainlevel i12">
+                  <a href="/971/list.htm" target="_self">常用下载</a>
+                  
+                  <ul id="sub_{级别样式}">
+                    
+                    <li><a href="/3789/list.htm" target="_self">学生相关</a></li>
+                    
+                    <li><a href="/3790/list.htm" target="_self">教务相关</a></li>
+                    
+                    <li><a href="/3791/list.htm" target="_self">科研相关</a></li>
+                    
+                    <li><a href="http://210.35.95.13/base/" target="_self">基础课程</a></li>
+                    
+                  </ul>
+                  
+                </li>
+                
+            </ul>
+            
+            <div class="clear">
+            </div>
+             
+ </div>
+          </div>
+        </div>
+        <div class="post-jumbotran" frag="面板301">
+          <div frag="窗口301">
+                            <!-- JSON列表 -->
+<script language="JavaScript" class="">
+    var w301imgJsons = [
+    
+        
+            {
+            "src": "/_upload/article/images/38/b7/6a11b70b4e46b5450af36548e629/532c1efb-9fbb-4f4d-9705-a320847e0f97.jpg",
+            "original": "/_upload/article/images/38/b7/6a11b70b4e46b5450af36548e629/532c1efb-9fbb-4f4d-9705-a320847e0f97.jpg",
+            "title": "学院风光",
+            "url": "javascript:void(0)"
+            },
+        
+    
+        
+            {
+            "src": "/_upload/article/images/8f/29/b2bc2d3d48d79d84c927b90c15b9/8176b959-06ed-4bb4-88ed-d2b84039a1b9.jpg",
+            "original": "/_upload/article/images/8f/29/b2bc2d3d48d79d84c927b90c15b9/8176b959-06ed-4bb4-88ed-d2b84039a1b9.jpg",
+            "title": "学院风光",
+            "url": "javascript:void(0)"
+            }
+        
+    
+    ];
+</script>
+
+            
+            <div class="jumbotran focus-box" style="width: 960px; height: 200px;"><div class="focus-container" style="width: 960px; height: 200px; visibility: visible;"><div class="focus-item" style="display: block; left: 100%;"><a href="javascript:void(0)" target="_blank"><img src="/_upload/article/images/38/b7/6a11b70b4e46b5450af36548e629/532c1efb-9fbb-4f4d-9705-a320847e0f97.jpg"></a></div><div class="focus-item" style="display: block; left: 0%;"><a href="javascript:void(0)" target="_blank"><img src="/_upload/article/images/8f/29/b2bc2d3d48d79d84c927b90c15b9/8176b959-06ed-4bb4-88ed-d2b84039a1b9.jpg"></a></div></div><a class="focus-navigation focus-prev">&lt;</a><a class="focus-navigation focus-next">&gt;</a></div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="notice left" frag="面板401">
+          <div frag="窗口401">
+              <!-- JSON列表 -->
+<script language="JavaScript" class="">
+    var w401imgJsons = [
+    
+        
+            {
+            "src": "/_upload/article/images/6a/58/a60f728949cfb4b299b560338c57/08f6166d-1142-4814-858e-b46ebd975015_s.jpg",
+            "original": "/_upload/article/images/6a/58/a60f728949cfb4b299b560338c57/08f6166d-1142-4814-858e-b46ebd975015.jpg",
+            "title": "计算机学院2018级研究生新生开学典礼暨导师见面会顺利开展",
+            "url": "/ed/12/c972a191762/page.htm"
+            },
+        
+    
+        
+            {
+            "src": "/_upload/article/images/8e/25/85f58b734b78bd834065272224dc/e2d0b515-c058-45a9-b31a-6e9de5a795cb_s.jpg",
+            "original": "/_upload/article/images/8e/25/85f58b734b78bd834065272224dc/e2d0b515-c058-45a9-b31a-6e9de5a795cb.jpg",
+            "title": "我院2018级研究生新生报到工作圆满结束",
+            "url": "/ec/f9/c972a191737/page.htm"
+            },
+        
+    
+        
+            {
+            "src": "/_upload/article/images/e8/47/657f79cc4a62b935a452bb2967a2/d107ffd2-d877-47fa-b91d-5e15e3295059_s.png",
+            "original": "/_upload/article/images/e8/47/657f79cc4a62b935a452bb2967a2/d107ffd2-d877-47fa-b91d-5e15e3295059.png",
+            "title": "计算机学院2018级新生庆十一活动顺利开展",
+            "url": "/ec/ac/c972a191660/page.htm"
+            },
+        
+    
+        
+            {
+            "src": "/_upload/article/images/86/f8/3e655d8249ec8b1811e1e219f492/75646c9a-485e-492e-a7ca-e5fbfeaf4620_s.png",
+            "original": "/_upload/article/images/86/f8/3e655d8249ec8b1811e1e219f492/75646c9a-485e-492e-a7ca-e5fbfeaf4620.png",
+            "title": "计算机学院2018级新生开学典礼暨教育大会顺利开展",
+            "url": "/ec/93/c972a191635/page.htm"
+            },
+        
+    
+        
+            {
+            "src": "/_upload/article/images/82/7c/e6f496d54a9f9151a9c0bc6ca43b/6dd4ff55-0d4e-4515-a3f4-f94efe879e16_s.png",
+            "original": "/_upload/article/images/82/7c/e6f496d54a9f9151a9c0bc6ca43b/6dd4ff55-0d4e-4515-a3f4-f94efe879e16.png",
+            "title": "我院2018年临港校区迎新工作圆满展开",
+            "url": "/ec/0a/c972a191498/page.htm"
+            }
+        
+    
+    ];
+</script>
+
+              <div class="jumbotran1 focus-box" style="width: 289px; height: 245.85069444444443px;"><div class="focus-container" style="width: 289px; height: 245.85069444444443px; visibility: visible;"><div class="focus-item" style="display: block; left: -100%;"><a href="/ed/12/c972a191762/page.htm" target="_blank"><img src="/_upload/article/images/6a/58/a60f728949cfb4b299b560338c57/08f6166d-1142-4814-858e-b46ebd975015_s.jpg"></a></div><div class="focus-item" style="display: block; left: -100%;"><a href="/ec/f9/c972a191737/page.htm" target="_blank"><img src="/_upload/article/images/8e/25/85f58b734b78bd834065272224dc/e2d0b515-c058-45a9-b31a-6e9de5a795cb_s.jpg"></a></div><div class="focus-item" style="display: block; left: -100%;"><a href="/ec/ac/c972a191660/page.htm" target="_blank"><img src="/_upload/article/images/e8/47/657f79cc4a62b935a452bb2967a2/d107ffd2-d877-47fa-b91d-5e15e3295059_s.png"></a></div><div class="focus-item" style="display: block; left: -100%;"><a href="/ec/93/c972a191635/page.htm" target="_blank"><img src="/_upload/article/images/86/f8/3e655d8249ec8b1811e1e219f492/75646c9a-485e-492e-a7ca-e5fbfeaf4620_s.png"></a></div><div class="focus-item" style="display: block; left: 0%;"><a href="/ec/0a/c972a191498/page.htm" target="_blank"><img src="/_upload/article/images/82/7c/e6f496d54a9f9151a9c0bc6ca43b/6dd4ff55-0d4e-4515-a3f4-f94efe879e16_s.png"></a></div></div><div class="focus-title-bar" style="display: block;"><div class="focus-title-bg"></div><h2 class="focus-title"><a href="/ec/0a/c972a191498/page.htm" target="_blank">我院2018年临港校区迎新工作圆满展开</a></h2></div><a class="focus-navigation focus-prev">&lt;</a><a class="focus-navigation focus-next">&gt;</a><div class="focus-pagination"><a class="focus-page focus-page-1"><span>1</span></a><a class="focus-page focus-page-2"><span>2</span></a><a class="focus-page focus-page-3"><span>3</span></a><a class="focus-page focus-page-4"><span>4</span></a><a class="focus-page focus-page-5 focus-page-active"><span>5</span></a></div></div>                
+          </div>
+        </div>
+        <div class="news left m_left">
+            <div class="news1">
+                <div class="news1_1 left">
+                    <h4 style="padding-top:1px;font-size:13px">
+                        学院新闻
+                    </h4>
+                </div>
+            </div>
+            <div class="news2 news21">
+              <dl>
+               <div frag="面板4021">
+                <div frag="窗口4021">
+                 <div id="wp_news_w4021"> 
+
+                  <ul>
+                   
+                   <li class="list_item i1 clearfix">                     
+                    <dd><a href="/dd/83/c3929a187779/page.htm" target="_blank" title="大数据助力大扶贫-——计算机学院“云上乡村”实践队赴贵州开展实践调研">7月11日至7月20日，计算机学院“云上乡村”实践队赴贵州贵阳开展了为期十天的暑期社会实践。本次社会实践紧...</a><span style="float:right;display:inline;_margin-top:-20px;*margin-top:-20px;"><a href="/dd/83/c3929a187779/page.htm" target="_blank">全文</a></span></dd>
+                   </li>
+                   
+                  </ul>
+                 </div> 
+
+                </div>
+               </div>
+              </dl>
+            </div>
+            <div class="news2">
+              <dl>
+               <div frag="面板402">
+                <div frag="窗口402">
+                 <div id="wp_news_w402"> 
+
+                  <ul>
+                   
+                   <li class="list_item i1 clearfix">
+                     <dt><a title="计算机学院2018级研究生新生开学典礼暨导师见面会顺利开展" href="/ed/12/c972a191762/page.htm" target="_blank" style="font-size: 10pt;">
+                        <img src="/_upload/tpl/00/83/131/template131/htmlRes/dot.gif" style="padding-left: 5px; padding-right: 5px">计算机学院2018级研究生新生开学典礼暨导师见面会顺利开展</a><font>10-11</font></dt>
+                    <!--<dd><a href='/ed/12/c972a191762/page.htm' target='_blank' title='计算机学院2018级研究生新生开学典礼暨导师见面会顺利开展'>10月10日上午，计算机科学与技术学院2018级研究生新生开学典礼暨导师见面会在临港校区一教举行。学院班子成员、导师、辅导员等多名领导老师...</a><span style="float:right;display:inline;_margin-top:-20px;*margin-top:-20px;"><a href="/ed/12/c972a191762/page.htm" target="_blank">全文</a></span></dd>-->
+                   </li>
+                   
+                   <li class="list_item i2 clearfix">
+                     <dt><a title="计算机科学与技术学院2017―2018学年优秀学生奖学金获得者名单公示" href="/ec/fd/c972a191741/page.htm" target="_blank" style="font-size: 10pt;">
+                        <img src="/_upload/tpl/00/83/131/template131/htmlRes/dot.gif" style="padding-left: 5px; padding-right: 5px">计算机科学与技术学院2017―2018学年优秀学生奖学金获得者名单公示</a><font>10-10</font></dt>
+                    <!--<dd><a href='/ec/fd/c972a191741/page.htm' target='_blank' title='计算机科学与技术学院2017―2018学年优秀学生奖学金获得者名单公示'>各位同学：　　根据学生个人申请，学院奖学金评审小组审议，现将计算机科学与技术学院2017―2018学年优秀学生奖学金获得者名单在B3楼A216进...</a><span style="float:right;display:inline;_margin-top:-20px;*margin-top:-20px;"><a href="/ec/fd/c972a191741/page.htm" target="_blank">全文</a></span></dd>-->
+                   </li>
+                   
+                   <li class="list_item i3 clearfix">
+                     <dt><a title="我院2018级研究生新生报到工作圆满结束" href="/ec/f9/c972a191737/page.htm" target="_blank" style="font-size: 10pt;">
+                        <img src="/_upload/tpl/00/83/131/template131/htmlRes/dot.gif" style="padding-left: 5px; padding-right: 5px">我院2018级研究生新生报到工作圆满结束</a><font>10-10</font></dt>
+                    <!--<dd><a href='/ec/f9/c972a191737/page.htm' target='_blank' title='我院2018级研究生新生报到工作圆满结束'>10月9日，我院研究生迎新工作全面展开，在学院领导班子的指导下，朱佳和高远老师共同安排落实，确保迎新工作顺利进行。上午8点，来自杨浦校...</a><span style="float:right;display:inline;_margin-top:-20px;*margin-top:-20px;"><a href="/ec/f9/c972a191737/page.htm" target="_blank">全文</a></span></dd>-->
+                   </li>
+                   
+                   <li class="list_item i4 clearfix">
+                     <dt><a title="【通知公告】关于我院2018-2019第一学期勤工助学岗位的招聘通知" href="/ec/bf/c972a191679/page.htm" target="_blank" style="font-size: 10pt;">
+                        <img src="/_upload/tpl/00/83/131/template131/htmlRes/dot.gif" style="padding-left: 5px; padding-right: 5px">【通知公告】关于我院2018-2019第一学期勤工助学岗位的招聘通知</a><font>10-08</font></dt>
+                    <!--<dd><a href='/ec/bf/c972a191679/page.htm' target='_blank' title='【通知公告】关于我院2018-2019第一学期勤工助学岗位的招聘通知'>为了培养学生的综合能力，帮助家庭经济困难的学生安心完成在校学业，我院设立若干勤工助学岗位，现面向我院学生招聘，职位、要求、招聘流程...</a><span style="float:right;display:inline;_margin-top:-20px;*margin-top:-20px;"><a href="/ec/bf/c972a191679/page.htm" target="_blank">全文</a></span></dd>-->
+                   </li>
+                   
+                   <li class="list_item i5 clearfix">
+                     <dt><a title="计算机学院2018级新生庆十一活动顺利开展" href="/ec/ac/c972a191660/page.htm" target="_blank" style="font-size: 10pt;">
+                        <img src="/_upload/tpl/00/83/131/template131/htmlRes/dot.gif" style="padding-left: 5px; padding-right: 5px">计算机学院2018级新生庆十一活动顺利开展</a><font>10-02</font></dt>
+                    <!--<dd><a href='/ec/ac/c972a191660/page.htm' target='_blank' title='计算机学院2018级新生庆十一活动顺利开展'>为庆祝中华人民共和国成立69周年，加强新生爱国主义教育，增强新生班级凝聚力，10月1日上午，我院组织2018级新生开展庆十一活动，前往中国...</a><span style="float:right;display:inline;_margin-top:-20px;*margin-top:-20px;"><a href="/ec/ac/c972a191660/page.htm" target="_blank">全文</a></span></dd>-->
+                   </li>
+                   
+                   <li class="list_item i6 clearfix">
+                     <dt><a title="计算机学院2018级新生开学典礼暨教育大会顺利开展" href="/ec/93/c972a191635/page.htm" target="_blank" style="font-size: 10pt;">
+                        <img src="/_upload/tpl/00/83/131/template131/htmlRes/dot.gif" style="padding-left: 5px; padding-right: 5px">计算机学院2018级新生开学典礼暨教育大会顺利开展</a><font>09-30</font></dt>
+                    <!--<dd><a href='/ec/93/c972a191635/page.htm' target='_blank' title='计算机学院2018级新生开学典礼暨教育大会顺利开展'>&nbsp;&nbsp;&nbsp; &nbsp;9月29日上午，计算机科学与技术学院2018级本科新生开学典礼暨教育大会在临港校区三教举行。学院班子成员、系主任...</a><span style="float:right;display:inline;_margin-top:-20px;*margin-top:-20px;"><a href="/ec/93/c972a191635/page.htm" target="_blank">全文</a></span></dd>-->
+                   </li>
+                   
+                  </ul>
+                 </div> 
+
+                </div>
+               </div>
+               <dt><font style="float: right; padding-right: 13px;">
+                 <a href="http://jsjxy.shiep.edu.cn/972/list.htm" target="_blank"><img src="/_upload/tpl/00/83/131/template131/htmlRes/more.gif" alt=""></a></font>
+               </dt>
+              </dl>
+            </div>
+        </div>
+        <div class="right left" frag="面板403">
+          <div frag="窗口403">
+            <div class="right_title" style="padding-top:5px;font-size:13px">
+                最新公告 
+            </div>
+            <div class="right_centen">
+                <div id="wp_news_w403"> 
+
+                <ul>
+                  
+                  <li><a title="2018年计算机学院研究生国家奖学金评选细则及评审委员会名单" href="/ec/81/c973a191617/page.htm" target="_blank">&nbsp;2018年计算机学院研究生国家奖学金评选细则及评审委员会名单</a><br></li>
+                  
+                  <li><a title="计算机学院2018年喜获3项国家自科基金立项" href="/de/53/c973a187987/page.htm" target="_blank">&nbsp;计算机学院2018年喜获3项国家自科基金立项</a><br></li>
+                  
+                  <li><a title="计算机科学与技术学院硕士研究生兼职指导教师申请表发布通告" href="/cb/96/c973a183190/page.htm" target="_blank">&nbsp;计算机科学与技术学院硕士研究生兼职指导教师申请表发布通告</a><br></li>
+                  
+                  <li><a title="7月1日开授全英课程《Cyber Security in the Internet of Things》..." href="/cb/95/c973a183189/page.htm" target="_blank">&nbsp;7月1日开授全英课程《Cyber Security in the Internet of Things》...</a><br></li>
+                  
+                  <li><a title="关于 2018年度计算机科学与技术学院研究生课程建设教改教研项目申报的通知" href="/cb/94/c973a183188/page.htm" target="_blank">&nbsp;关于 2018年度计算机科学与技术学院研究生课程建设教改教研项目申报的通知</a><br></li>
+                  
+                  <li><a title="关于 2018年度研究生课程建设教改教研项目申报的通知" href="/cb/93/c973a183187/page.htm" target="_blank">&nbsp;关于 2018年度研究生课程建设教改教研项目申报的通知</a><br></li>
+                  
+                  <li><a title="【公示】2018年“电院电气暨电力电子奖学金”入选者公示" href="/cb/92/c973a183186/page.htm" target="_blank">&nbsp;【公示】2018年“电院电气暨电力电子奖学金”入选者公示</a><br></li>
+                  
+                  <li><a title="【非全调剂】上海电力学院2018年非全日制硕士研究生招生最新调剂信息" href="/cb/91/c973a183185/page.htm" target="_blank">&nbsp;【非全调剂】上海电力学院2018年非全日制硕士研究生招生最新调剂信息</a><br></li>
+                  
+                  <span style="padding-right: 10px; padding-top: 3px; float: right;">
+                    <a href="http://jsjxy.shiep.edu.cn/973/list.htm" target="_blank">
+                      <img src="/_upload/tpl/00/83/131/template131/htmlRes/more.gif" alt="">
+                     </a>
+                  </span>
+                </ul>
+                </div> 
+
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="maincontent">
+        <div class="main1">
+            <div class="main1_1">
+                <div class="main1_1">
+                    <div class="main1_1title">
+                        <div class="main1_1title1">
+                            <h4 style="font-size:13px">
+                                教学教务
+                            </h4>
+                        </div>
+                        <div class="main1_1title2">
+                            <a href="http://jsjxy.shiep.edu.cn/987/list.htm" target="_blank">
+                                <img src="/_upload/tpl/00/83/131/template131/htmlRes/more.gif" border="0">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="main1_centen" frag="面板501">
+                      <div frag="窗口501">
+                        <div id="wp_news_w501"> 
+
+                        <ul>
+                          
+                          <li>
+                            <a title="【重要通知】2014级毕业设计答辩安排" style="float:left;" href="/db/36/c987a187190/page.htm" target="_blank">【重要通知】2014级毕业设计答辩安排</a>
+                            <span style="float:right">06-11</span>
+                          </li>
+                          
+                          <li>
+                            <a title="关于2018届毕业设计（论文）第二次查重工作的通知" style="float:left;" href="/db/35/c987a187189/page.htm" target="_blank">关于2018届毕业设计（论文）第二次查重工作的通知</a>
+                            <span style="float:right">06-05</span>
+                          </li>
+                          
+                          <li>
+                            <a title="关于开展2017级计算机科学与技术专业（卓越工程师班）选拔工作的通知" style="float:left;" href="/db/34/c987a187188/page.htm" target="_blank">关于开展2017级计算机科学与技术专业（卓越工程师班）选拔工作的通知</a>
+                            <span style="float:right">06-05</span>
+                          </li>
+                          
+                          <li>
+                            <a title="2017-2018学年第二学期计算机学院民族生辅导安排" style="float:left;" href="/db/33/c987a187187/page.htm" target="_blank">2017-2018学年第二学期计算机学院民族生辅导安排</a>
+                            <span style="float:right">05-16</span>
+                          </li>
+                          
+                          <li>
+                            <a title="【重要通知】有关2018届毕业设计（论文）后续工作的通知" style="float:left;" href="/db/32/c987a187186/page.htm" target="_blank">【重要通知】有关2018届毕业设计（论文）后续工作的通知</a>
+                            <span style="float:right">05-14</span>
+                          </li>
+                          
+                          <li>
+                            <a title="201720182第二学期免听答疑安排" style="float:left;" href="/db/31/c987a187185/page.htm" target="_blank">201720182第二学期免听答疑安排</a>
+                            <span style="float:right">05-08</span>
+                          </li>
+                          
+                          <li>
+                            <a title="2017-2018学年第二学期期中教学检查安排" style="float:left;" href="/db/30/c987a187184/page.htm" target="_blank">2017-2018学年第二学期期中教学检查安排</a>
+                            <span style="float:right">04-23</span>
+                          </li>
+                          
+                          <li>
+                            <a title="关于2018届毕业设计（论文）中期检查的通知（更新版）" style="float:left;" href="/db/2f/c987a187183/page.htm" target="_blank">关于2018届毕业设计（论文）中期检查的通知（更新版）</a>
+                            <span style="float:right">04-13</span>
+                          </li>
+                          
+                          <li>
+                            <a title="2018年上海市科创项目答辩成绩公示" style="float:left;" href="/db/2e/c987a187182/page.htm" target="_blank">2018年上海市科创项目答辩成绩公示</a>
+                            <span style="float:right">04-10</span>
+                          </li>
+                          
+                          <li>
+                            <a title="2018年上海市科创项目（创新类）学院答辩通知" style="float:left;" href="/db/2d/c987a187181/page.htm" target="_blank">2018年上海市科创项目（创新类）学院答辩通知</a>
+                            <span style="float:right">04-04</span>
+                          </li>
+                          
+                        </ul>
+                        </div> 
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main1_2">
+                <div class="main1_1title">
+                    <div class="main1_1title1">
+                        <h4 style="font-size:13px">
+                            学生工作
+                        </h4>
+                    </div>
+                    <div class="main1_1title2">
+                        <a href="http://jsjxy.shiep.edu.cn/1001/list.htm" target="_blank">
+                            <img src="/_upload/tpl/00/83/131/template131/htmlRes/more.gif" border="0">
+                        </a>
+                    </div>
+                </div>
+                <div class="main1_centen" frag="面板502">
+                  <div frag="窗口502">
+                    <div id="wp_news_w502"> 
+
+                      <ul>
+                        
+                        <li>
+                          <a title="【招聘信息】57-201810上海中车瑞伯德智能系统股份有限公司校园招聘简章" style="float:left;" href="/ed/02/c967a191746/page.htm" target="_blank">【招聘信息】57-201810上海中车瑞伯德智能系统股份有限公司校园招聘简章</a>
+                          <span style="float:right">10-08</span>
+                        </li>  
+                        
+                        <li>
+                          <a title="【招聘信息】56-201809中国电信（上海分公司）上海电力学院专场招聘会" style="float:left;" href="/ed/01/c967a191745/page.htm" target="_blank">【招聘信息】56-201809中国电信（上海分公司）上海电力学院专场招聘会</a>
+                          <span style="float:right">09-28</span>
+                        </li>  
+                        
+                        <li>
+                          <a title="【招聘信息】55-201809上海学而思2019上海电力大学教师招聘" style="float:left;" href="/ec/ff/c967a191743/page.htm" target="_blank">【招聘信息】55-201809上海学而思2019上海电力大学教师招聘</a>
+                          <span style="float:right">09-18</span>
+                        </li>  
+                        
+                        <li>
+                          <a title="【通知】计算机学院关于申请国家奖学金、上海市奖学金、 国家励志奖学金的通知" style="float:left;" href="/ea/a8/c967a191144/page.htm" target="_blank">【通知】计算机学院关于申请国家奖学金、上海市奖学金、 国家励志奖学金的通知</a>
+                          <span style="float:right">09-14</span>
+                        </li>  
+                        
+                        <li>
+                          <a title="【公示】关于计算机学院推荐宝钢奖学金候选人公示" style="float:left;" href="/d8/83/c967a186499/page.htm" target="_blank">【公示】关于计算机学院推荐宝钢奖学金候选人公示</a>
+                          <span style="float:right">06-19</span>
+                        </li>  
+                        
+                        <li>
+                          <a title="【新闻速递】计算机学院第二次团学代会顺利召开" style="float:left;" href="/d8/82/c967a186498/page.htm" target="_blank">【新闻速递】计算机学院第二次团学代会顺利召开</a>
+                          <span style="float:right">06-14</span>
+                        </li>  
+                        
+                        <li>
+                          <a title="【公示】2017级计算机专业卓越工程师班选拔结果公示" style="float:left;" href="/d8/81/c967a186497/page.htm" target="_blank">【公示】2017级计算机专业卓越工程师班选拔结果公示</a>
+                          <span style="float:right">06-14</span>
+                        </li>  
+                        
+                        <li>
+                          <a title="【通知】关于宝钢教育奖（优秀学生奖）评选的通知" style="float:left;" href="/d8/80/c967a186496/page.htm" target="_blank">【通知】关于宝钢教育奖（优秀学生奖）评选的通知</a>
+                          <span style="float:right">06-12</span>
+                        </li>  
+                        
+                        <li>
+                          <a title="【新闻速递】我院2017级研究生完成南通-杨浦搬迁工作" style="float:left;" href="/d8/7f/c967a186495/page.htm" target="_blank">【新闻速递】我院2017级研究生完成南通-杨浦搬迁工作</a>
+                          <span style="float:right">06-12</span>
+                        </li>  
+                        
+                        <li>
+                          <a title="【通知】我院2018届毕业生离校工作安排" style="float:left;" href="/d8/7e/c967a186494/page.htm" target="_blank">【通知】我院2018届毕业生离校工作安排</a>
+                          <span style="float:right">06-08</span>
+                        </li>  
+                          
+                      </ul>
+                    </div> 
+
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear: both">
+        </div>
+        <div class="main2 m_top">
+            <div class="main2_1 left" frag="面板601">
+                <div class="main2_1title">
+                    <div class="main2_1title1">
+                        <h4 style="font-size:13px">
+                            招聘信息
+                        </h4>
+                    </div>
+                    <div class="main2_1title2">
+                        <a href="http://jsjxy.shiep.edu.cn/1004/list.htm" target="_blank">
+                            <img src="/_upload/tpl/00/83/131/template131/htmlRes/more.gif" border="0">
+                        </a>
+                    </div>
+                </div>
+                <div class="main2_1centen" frag="窗口601">
+                    <dl>
+                        <dd>
+                            <a href="http://jsjxy.shiep.edu.cn/1004/list.htm" target="_blank">
+                                <img src="/_upload/tpl/00/83/131/template131/htmlRes/kyxx.jpg" width="118" height="73" border="0">
+                            </a>
+                        </dd>
+                        <span>
+                            <dd>
+                                紧密与企业沟通，及时发布企业招聘以及实习信息，帮助学生及时就业。
+                            </dd>
+                        </span>
+                        
+                        <div id="wp_news_w601"> 
+
+                          
+                          <dt style="clear:both">
+                            <a title="【招聘信息】57-201810上海中车瑞伯德智能系统股份有限公司校园招聘简章" href="/ed/02/c1004a191746/page.htm" target="_blank">【招聘信息】57-201810上海中车瑞伯德智能系统股份有限公司校园招聘简章</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a title="【招聘信息】56-201809中国电信（上海分公司）上海电力学院专场招聘会" href="/ed/01/c1004a191745/page.htm" target="_blank">【招聘信息】56-201809中国电信（上海分公司）上海电力学院专场招聘会</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a title="【招聘信息】55-201809上海学而思2019上海电力大学教师招聘" href="/ec/ff/c1004a191743/page.htm" target="_blank">【招聘信息】55-201809上海学而思2019上海电力大学教师招聘</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a title="【招聘信息】54-201805中钢期货有限公司招聘简章" href="/bd/23/c1004a179491/page.htm" target="_blank">【招聘信息】54-201805中钢期货有限公司招聘简章</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a title="【招聘信息】53-201805上海电气设备有限公司招聘" href="/bd/21/c1004a179489/page.htm" target="_blank">【招聘信息】53-201805上海电气设备有限公司招聘</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a title="【招聘信息】52-201804上海挪亚检测认证集团有限公司招聘项目助理" href="/bd/1f/c1004a179487/page.htm" target="_blank">【招聘信息】52-201804上海挪亚检测认证集团有限公司招聘项目助理</a>
+                          </dt>
+                          
+                        </div> 
+
+
+                        
+                    </dl>
+                </div>
+            </div>
+            <div class="main2_2 left" frag="面板602">
+                <div class="main2_1title">
+                    <div class="main2_2title1">
+                        <h4 style="font-size:13px">
+                            实验中心
+                        </h4>
+                    </div>
+                    <div class="main2_1title2">
+                        <a href="http://jsjxy.shiep.edu.cn/969/list.htm" target="_blank">
+                            <img src="/_upload/tpl/00/83/131/template131/htmlRes/more.gif" border="0">
+                        </a>
+                    </div>
+                </div>
+                <div class="main2_1centen" frag="窗口602">
+                    <dl>
+                        <dd>
+                            <a href="http://jsjxy.shiep.edu.cn/969/list.htm" target="_blank">
+                                <img src="/_upload/tpl/00/83/131/template131/htmlRes/lab.jpg" width="118" height="73" border="0">
+                            </a>
+                        </dd>
+                        <span>
+                            <dd>
+                                是我院实验室建设与管理、实践教学管理的职能部门，承担我院实验室建设与管理、实践教学管理工作
+                            </dd>
+                        </span>
+                        
+                        
+                        <div id="wp_news_w602"> 
+
+                          
+                          <dt style="clear:both">
+                            <a title="实验教学进度表最新15161" href="/8b/f0/c1010a35824/page.htm" target="_blank">实验教学进度表最新15161</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a title="15161实验中心课表" href="/8b/f6/c1010a35830/page.htm" target="_blank">15161实验中心课表</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a title="实验中心南汇值班表-14152" href="/8c/10/c1010a35856/page.htm" target="_blank">实验中心南汇值班表-14152</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a title="实验教学进度表" href="/8c/24/c1010a35876/page.htm" target="_blank">实验教学进度表</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a title="课程表-2014-2015第二学期计算机科学与技术学院实验中心" href="/8b/ff/c1010a35839/page.htm" target="_blank">课程表-2014-2015第二学期计算机科学与技术学院实验中心</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a title="计算机科学与技术学院实验中心实验室使用登记表-14152" href="/8c/1c/c1010a35868/page.htm" target="_blank">计算机科学与技术学院实验中心实验室使用登记表-14152</a>
+                          </dt>
+                          
+                        </div> 
+
+                        
+
+                        
+                    </dl>
+                </div>
+            </div>
+            <div class="main2_1 left" frag="面板603">
+                <div class="main2_1title">
+                    <div class="main2_3title1">
+                        <h4 style="font-size:13px">
+                            党群园地
+                        </h4>
+                    </div>
+                    <div class="main2_1title2">
+                        <a href="http://jsjxy.shiep.edu.cn/1007/list.htm" target="_blank">
+                            <img src="/_upload/tpl/00/83/131/template131/htmlRes/more.gif" border="0">
+                        </a>
+                    </div>
+                </div>
+                <div class="main2_1centen" frag="窗口603">
+                    <dl>
+                        <dd>
+                            <a href="http://jsjxy.shiep.edu.cn/1007/list.htm" target="_blank">
+                                <img src="/_upload/tpl/00/83/131/template131/htmlRes/dqyd.jpg" width="118" height="73" border="0">
+                            </a>
+                        </dd>
+                        <span>
+                            <dd>
+                                <a href="http://jsjxy.shiep.edu.cn/1007/list.htm" target="_blank">充分发挥党组织的战斗堡垒作用和共产党员先锋模范作用，进一步延伸创先争优活动内涵.</a>
+                            </dd>
+                        </span>
+                        <div id="wp_news_w603"> 
+
+                          
+                          <dt style="clear:both">
+                            <a href="/eb/7c/c1007a191356/page.htm" target="_blank" title="计算机学院各支部积极开展“进博先锋·党员行动”主题党日活动">计算机学院各支部积极开展“进博先锋·党员行动”主题党日活动</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a href="/eb/f7/c1007a191479/page.htm" target="_blank" title="我院党委组织全体教师学习习近平“金句”讲教育活动">我院党委组织全体教师学习习近平“金句”讲教育活动</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a href="/cf/bc/c1007a184252/page.htm" target="_blank" title="信安本科生党支部举办“不忘初心，寄语未来”党员政治生日主题活动">信安本科生党支部举办“不忘初心，寄语未来”党员政治生日主题活动</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a href="/cf/bb/c1007a184251/page.htm" target="_blank" title="计算机学院开展毕业生党风廉政专题教育会">计算机学院开展毕业生党风廉政专题教育会</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a href="/cf/ba/c1007a184250/page.htm" target="_blank" title="计算机学院党委学习极地精神开展实践活动">计算机学院党委学习极地精神开展实践活动</a>
+                          </dt>
+                          
+                          <dt style="clear:both">
+                            <a href="/cf/b8/c1007a184248/page.htm" target="_blank" title="关于2018年6月计算机科学与技术学院党委拟转正党员情况的公示">关于2018年6月计算机科学与技术学院党委拟转正党员情况的公示</a>
+                          </dt>
+                          
+                        </div> 
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both">
+</div>
+<div class="link1 m_top">
+    <div class="link_centen">
+        <span style="font-size: 14px; font-weight: 600; color: black">快速链接:
+        </span> <a href="http://www.nsfc.gov.cn/" target="_blank">国家自然科学基金委</a>
+            <span>|</span><a href="http://www.most.gov.cn/" target="_blank">科技部</a>
+            <span>|</span><a href="http://www.moe.edu.cn/" target="_blank">教育部</a>
+            <span>|</span><a href="http://www.shec.edu.cn/" target="_blank">上海市教委</a>
+            <span>|</span><a href="http://www.stcsm.gov.cn" target="_blank">上海科委</a>      
+          
+    </div>
+</div>
+<div class="footbox">
+    <div class="foot1">
+        <a href="http://jsjxy.shiep.edu.cn/974/list.htm">关于我们</a> - <a href="http://jsjxy.shiep.edu.cn/977/list.htm">联系我们</a> - <a href="http://210.35.95.13/teacher/login.asp" target="_blank">教师入口</a>
+    </div>
+    <div class="foot">
+        <ul>
+            <li>Copyright 2012, 上海电力学院 版权所有.</li>
+        </ul>
+    </div>
+</div>
+
+    
+
+
+
+ <img src="/_visitcount?siteId=52&amp;type=1&amp;columnId=722" style="display:none" width="0" height="0"></body></html>

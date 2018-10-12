@@ -1,0 +1,787 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>上海电力学院图书馆</title>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+<link rel="stylesheet" href="/images/default/css/jquery.mCustomScrollbar.css" type="text/css" media="screen">
+<link rel="stylesheet" type="text/css" href="/images/default/style.css">
+<link rel="stylesheet" type="text/css" href="/images/default/cms.css">
+<link rel="stylesheet" href="/images/default/css/shiep.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/images/default/css/shieplist.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/images/default/css/xxk.css" type="text/css" media="screen">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="上海电力学院学位论文提交系统 电力自产文献数据库 中国标准全文数据库 重点学科... Apabi数字图书馆 中国标准全文数据库 国研网 人大复印资料 汉斯开源学术期刊 上海 电力 上海电力学院 图书馆 library">
+<meta name="description" content="上海电力学院图书馆与学校同时创建于1951年，经过多年学校的发展和变迁，目前已成为一个具有一定规模和特色的高校图书馆。">
+<link rel="icon" href="http://library.shiep.edu.cn/favicon.ico" type="image/x-icon"> 
+<link rel="shortcut icon" href="http://library.shiep.edu.cn/favicon.ico" type="image/x-icon">
+
+<script language="JavaScript">
+//屏蔽可忽略的js脚本错误
+function killErr(){
+	return true;
+}
+window.onerror=killErr;
+function get_obj(obj){
+   return document.getElementById(obj);
+}
+function choose_node(node){
+	$('#menu_'+node).addClass('choose');
+}
+function check_login(){
+	var username=get_obj('login_u').value;
+	var password=get_obj('login_p').value;
+	if(!username){
+		alert("用户名不能为空");
+		get_obj('login_u').focus();
+		return false;
+	}
+}
+
+function pop_login()
+{
+	var range = getRange();
+	$("#bodyly").fadeIn('slow');
+	document.getElementById("bodyly").style.width=$('body').width()+"px";
+	document.getElementById("bodyly").style.height=range.height+"px";
+	
+	$("#SearchDivhire").fadeIn('slow');
+	var url=document.URL;
+	//var t=window.screen.availHeight/2-180>0?window.screen.availHeight/2-180:window.screen.availHeight/2;
+	document.getElementById("SearchDivhire").style.top=200+"px";  
+	document.getElementById("SearchDivhire").style.left=($('body').width()/2-200>0?$('body').width()/2-200:0)+"px";
+	document.getElementById("hiretypes").innerHTML='';
+	var tmp_str='<form name="form_login" method="post" action="/do/login.php" onSubmit="return check_login()"><table cellpadding=1 cellspacing=3 align=center width=99% border=0>';
+	tmp_str+='<tr><td class="ltd">用户名：</td><td><input type="text" id="login_u" name="username"></td></tr>';
+	tmp_str+='<tr><td colspan="2" height="12px"></td></tr>';
+	tmp_str+='<tr><td class="ltd">密码：</td><td><input id="login_p" type="password" name="password"></td></tr>';
+	tmp_str+='<tr><td colspan="2" height="12px"></td></tr>';
+	tmp_str+='<tr><td></td><td style="padding-left:80px"><input type="hidden" name="step" value="2"><input type="hidden" name="type" value="1"><input class="radio" type="hidden" name="cookietime" value="86400" ><input type="hidden" name="fromurl" value="'+url+'"><input type="submit" name="Submit" value="提交"></td></tr>';
+	tmp_str+="</table></form>";
+	$("#hiretypes").html(tmp_str);
+}
+</script><script language="JavaScript" src="/images/default/inc.js"></script><script language="JavaScript" src="/images/default/default.js"></script></head>
+
+<!--[if IE 6]>
+<SCRIPT LANGUAGE="JavaScript" src="http://library.shiep.edu.cn/images/DD_belatedPNG.js"></SCRIPT>
+<script>
+DD_belatedPNG.fix('#header_search,.guide_top li,#listdh1');
+</script>
+<![endif]-->
+
+
+<body><div style="display:none;"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="AjaxEditTable"><tbody><tr><td class="head"><h3 class="L"></h3><h3 class="R"></h3><span class="eidtmodule" onclick="this.offsetParent.offsetParent.offsetParent.style.display='none'" onmouseover="this.style.cursor='hand'">关闭</span></td></tr><tr> <td class="middle"></td></tr></tbody></table></div>
+<script language="JavaScript" src="/images/jquery-1.9.1.min.js"></script>
+<script language="JavaScript" src="/images/default/bencandy.js"></script>
+<script language="JavaScript" src="/images/mdiv.js"></script>
+<script language="JavaScript" src="/images/index_sy.js"></script>
+<script type="text/javascript" src="/images/default/js/main.js"></script>
+<script type="text/javascript" src="/images/default/js/system.js"></script>
+<script type="text/javascript" src="/images/default/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+
+<!--body-->
+<a name="top"></a>
+<div class="wrap_">
+
+<div id="header">
+				<div id="logo" onclick="javascript:location.href='/.'"></div>
+
+				<div id="search">
+						<div id="search_1">
+	
+							<div class="step" style="background-color:#714ca1;"><a href="http://10.168.103.51:8080/reader/login.php" id="mylib" target="_blank">我的图书馆</a></div>
+							<div class="step" style="background:#e0e0e0;margin:0;"><input style="height:31px;color:#b0b0b0;" type="text" id="top_keywords" value="站内检索" onclick="if(this.value=='站内检索'){this.value='';this.style.color='#666'}" onblur="if(this.value==''){this.value='站内检索';this.style.color='#B0B0B0'};" onkeydown="huiche(event,1)"></div>
+							<div class="step" style="background:#714ca1 url(/images/default/img1/sec.png) no-repeat 50%;width:30px;" onclick="cksearch()"></div>
+							<div class="step" style="line-height:45px;">
+							
+								<a href="http://library.shiep.edu.cn/shiepen/" class="lan">English</a>
+<span style="color:#6f6f6f;margin:0 5px;">  <span>
+<a href="http://library.shiep.edu.cn/shiepen/" class="lan">   </a>
+							</span></span></div>
+
+						</div>
+						<div style="clear:both"></div>
+				</div>
+</div>
+
+<script type="text/javascript">
+<!--
+function cksearch(){
+	var inputString=document.getElementById("top_keywords").value;
+	inputString=$.trim(inputString);
+	if (inputString=='' || inputString=='站内检索')
+	{
+		alert('关键字不能为空!');
+		return false;
+	}else{
+		add_k(inputString);
+		window.open('/do/search.php?type=all&index=1&keyword='+encodeURI(inputString),'_self');
+	}
+}
+function add_k(inputString){  //记录检索关键词
+	inputString=$.trim(inputString);
+	$.ajax({
+	type:"POST",
+	url:"/do/add_s.php",
+	data:"queryString="+inputString,
+	success:function(data){}
+	});
+}
+function huiche(events,type)  //处理回车事件 
+{ 
+	var eventSource;
+    var currentKey = events.charCode||events.keyCode;
+    if(document.all){eventSource =window.event.srcElement; }
+    else{eventSource = events.target;}
+	if(currentKey==13){ 
+		switch(type)
+		{
+			case 1: cksearch();break;
+			case 2: search_jnt();break;
+			case 3: jump3();break;
+			case 4: jump();break;
+		}
+	} 
+} 
+
+function huiche2(events)  //处理回车事件 
+{ 
+	var type=parseInt($("#sText2").val());
+
+
+	var eventSource;
+    var currentKey = events.charCode||events.keyCode;
+    if(document.all){eventSource =window.event.srcElement; }
+    else{eventSource = events.target;}
+	if(currentKey==13){ 
+		switch(type)
+		{
+			case 0: searchResource();break;
+			case 1: searchResource1();break;
+			case 2: searchResource2();break;
+			case 3: searchResource3();break;
+			case 4: searchResource4();break;
+			case 5: searchResource5();break;
+		}
+	} 
+}
+
+function sbtn()  //处理回车事件 
+{ 
+	var type=parseInt($("#sText3").val());
+
+	switch(type)
+	{
+		case 0: searchResource();break;
+		case 1: searchResource1();break;
+		case 2: searchResource2();break;
+		case 3: searchResource3();break;
+		case 4: searchResource4();break;
+		case 5: searchResource5();break;
+	}
+}
+//-->
+</script>
+
+
+<script language="JavaScript">
+<!--//目的是为了做风格方便
+document.write('<div class="wrap">');
+//-->
+</script><div class="wrap">
+<!--
+-->
+	<div id="qrcode" style="position: fixed; left: 0px;">
+		<div class="tsgclose" onclick="ewmclose()">
+			关闭
+		</div>
+		<div class="tsgewm">
+			<a href="http://weibo.com/u/5231945858" target="_blank"><img src="/upload_files/label/1_20141107043916_上海电力学院图书馆微博.png" width="100" height="100" border="0"></a>
+		</div>
+		<div class="tsgewm">
+			<a href="http://library.shiep.edu.cn/list.php?fid=102" target="_blank"><img src="/upload_files/label/1_20141106022530_上海电力学院图书馆微信.png" width="100" height="100" border="0"></a>
+		</div>
+		<div class="tsgewm">
+			<a href="http://210.35.95.114/mobile_library/index.html" target="_blank"><img src="/upload_files/label/1_20141107043600_超星移动图书馆.png" width="100" height="100" border="0"></a>
+		</div>
+		<div class="tsgewm">
+			<a href="http://library.shiep.edu.cn/do/bencandy.php?fid=41&amp;id=237&amp;cvs=&amp;pls=" target="_blank"><img src="/upload_files/label/1_20141226101712_qq.png" width="100" height="100" border="0"></a>
+		</div>
+		<div class="tsgewm">
+			
+		</div>
+	</div>
+
+	<div id="qrcode2" style="position: fixed; left: 1056px;">
+		<div class="tsgclose" onclick="ewmclose2()" style="text-align:left;display:none">
+			关闭
+		</div>
+		<div class="tsgewm">
+			
+		</div>
+		<div class="tsgewm">
+			
+		</div>
+		<div class="tsgewm">
+			
+		</div>
+		<div class="tsgewm">
+			
+		</div>
+		<div class="tsgewm">
+			
+		</div>
+	</div>
+
+<script>
+$(function()
+{
+	var w=($(window).width()-$('.wrap').width())/2-105;
+	w=w>0?w:0;
+	$("#qrcode").css("left",w);
+
+	var w=$(window).width()-w-$("#qrcode").width();
+	w=w>0?w:0;
+	$("#qrcode2").css("left",w);
+})
+function ewmclose()
+{
+	$("#qrcode").hide();
+}
+function ewmclose2()
+{
+	$("#qrcode2").hide();
+}
+</script>
+
+
+<div class="cnt_div">
+				<div id="search_comx" class="portal_div">
+					<div id="qh">
+						<a href="#" onclick="showgc()" class="liqh">馆藏目录</a>
+						<a href="#" onclick="showgc()" class="qha">中文学术搜索</a>
+						<a href="#" onclick="showgc()" class="qha">外文学术搜索</a>
+						<a href="#" onclick="showgc()" class="qha">E读</a>
+						<a href="#" onclick="showgc()" class="qha">FIND+</a>
+						<a href="#" onclick="showchaoxing()" class="qha">超星发现</a>
+					</div>					
+					<div id="portal_search">				
+						<div id="searchtype"><a href="#">题  名</a><input type="hidden" value="title"></div>
+				
+						<!-- 馆藏目录 -->				
+						<div id="selects" style="position:relative;top:0;left:0;z-index:99;" class="xlbox">
+							<ul class="nav">
+								<li class="first">
+									<a href="#" style="">&nbsp;</a>
+									<div class="nav-w" style="display: none; width: 182px;">
+										<div class="section-nav1">
+											<ul class="ulshow">
+													
+												<li>
+													<a href="#" onclick="changenoticegc(1)">题  名</a><input type="hidden" value="title">
+												</li>
+												<li>
+													<a href="#" onclick="changenoticegc(2)">责任者</a><input type="hidden" value="author">
+												</li>
+												<li>
+													<a href="#" onclick="changenoticegc(3)">主题词</a><input type="hidden" value="keyword">
+												</li>
+											</ul>
+										</div>
+									</div>	
+								</li>
+							</ul>
+						</div>
+						
+						<!-- 中文学术搜索 -->	
+						<div id="selects1" style="position:relative;z-index:99;display:none" class="xlbox">&nbsp;				
+								<ul class="nav">
+									<li class="first">
+										<a href="#" style="">&nbsp;</a>
+											<div class="nav-w">
+												<div class="section-nav1">
+													<ul class="ulshow">
+													<li><a href="#" onclick="changenoticezw(1)">图书</a><input type="hidden" value="search"></li>
+													<li><a href="#" onclick="changenoticezw(2)">期刊</a><input type="hidden" value="searchJour"></li>
+													<li><a href="#" onclick="changenoticezw(3)">报纸</a><input type="hidden" value="searchNP"></li>
+													<li><a href="#" onclick="changenoticezw(4)">学位论文</a><input type="hidden" value="searchThesis"></li>
+													<li><a href="#" onclick="changenoticezw(5)">会议论文</a><input type="hidden" value="searchCP"></li>
+													<li><a href="#" onclick="changenoticezw(6)">专利</a><input type="hidden" value="searchPatent"></li>
+													<li><a href="#" onclick="changenoticezw(7)">标准</a><input type="hidden" value="searchStd"></li>
+													<li><a href="#" onclick="changenoticezw(8)">视频</a><input type="hidden" value="searchVideo"></li>
+													<li style="display:none;"><a href="#" onclick="changenoticezw(9)">信息咨询</a><input type="hidden" value="9"></li>
+													</ul>
+										</div>
+									</div>	
+								</li>
+							</ul>
+						</div>
+						
+						<!-- 外文学术搜索 -->	
+						<div id="selects2" style="position:relative;z-index:99;display:none" class="xlbox">&nbsp;
+						
+									<ul class="nav">
+									<li class="first">
+										<a href="#" style="">&nbsp;</a>
+											<div class="nav-w">
+												<div class="section-nav1">
+													<ul class="ulshow">
+													<li><a href="#" onclick="changenoticeww(0)">全部</a><input type="hidden" value="searchFMix"></li>
+													<li><a href="#" onclick="changenoticeww(1)">图书</a><input type="hidden" value="searchFBook"></li>
+													<li><a href="#" onclick="changenoticeww(2)">期刊</a><input type="hidden" value="searchFJour"></li>
+													<li><a href="#" onclick="changenoticeww(3)">报纸</a><input type="hidden" value="searchNP"></li>
+													<li><a href="#" onclick="changenoticeww(4)">学位论文</a><input type="hidden" value="searchFThesis"></li>
+													<li><a href="#" onclick="changenoticeww(5)">会议论文</a><input type="hidden" value="searchFCP"></li>
+													<li><a href="#" onclick="changenoticeww(6)">专利</a><input type="hidden" value="searchFPatent"></li>
+													<li><a href="#" onclick="changenoticeww(7)">标准</a><input type="hidden" value="searchFStd"></li>
+													<li style="display:none;"><a href="#" onclick="changenoticeww(8)">视频</a><input type="hidden" value="searchVideo"></li>
+													<li style="display:none;"><a href="#" onclick="changenoticeww(9)">信息咨询</a><input type="hidden" value="9"></li>
+											</ul>
+										</div>
+									</div>	
+								</li>
+							</ul>
+						</div>
+						
+						
+						<!-- E读-->	
+						<div id="selects3" style="position:relative;z-index:99;display:none" class="xlbox">&nbsp;
+						
+									<ul class="nav">
+									<li class="first">
+										<a href="#" style="">&nbsp;</a>
+											<div class="nav-w">
+												<div class="section-nav1">
+													<ul class="ulshow">
+													<li><a href="#" onclick="changenotice(0)">所有类型</a><input type="hidden" value="99"></li>
+													<li><a href="#" onclick="changenotice(1)">中文图书</a><input type="hidden" value="0"></li>
+													<li><a href="#" onclick="changenotice(2)">外文图书</a><input type="hidden" value="4"></li>
+													<li><a href="#" onclick="changenotice(3)">期刊文章</a><input type="hidden" value="1"></li>
+													<li><a href="#" onclick="changenotice(4)">中文期刊</a><input type="hidden" value="5"></li>
+													<li><a href="#" onclick="changenotice(5)">外文期刊</a><input type="hidden" value="2"></li>
+													<li><a href="#" onclick="changenotice(6)">学位论文</a><input type="hidden" value="3"></li>
+													<li><a href="#" onclick="changenotice(7)">特藏资源</a><input type="hidden" value="6"></li>
+										</ul>
+										</div>
+									</div>	
+								</li>
+							</ul>
+						
+						</div>
+						
+						<!-- 发现 -->	
+						<div id="selects4" style="position:relative;z-index:99;display:none" class="xlbox">&nbsp;
+									<ul class="nav">
+									<li class="first">
+										<a href="#" style="">&nbsp;</a>
+											<div class="nav-w">
+												<div class="section-nav1">
+													<ul class="ulshow">
+																<li><a href="#" onclick="changefindplus(0)">电子资源</a><input type="hidden" value="3"></li>
+											</ul>
+										</div>
+									</div>	
+								</li>
+							</ul>
+						
+						</div>
+						
+						<!-- 超星发现-->	
+						<div id="selects5" style="position:relative;z-index:99;display:none" class="xlbox"></div>
+					
+						
+							<div id="searchtext">	
+								<input type="text" id="sText" onkeydown="huiche2(event)">	
+								<input type="hidden" id="sText2" value="0">
+							</div>
+	
+							<div id="searchbutton" onclick="sbtn()" style="cursor:pointer;"></div>
+							<input type="hidden" id="sText3" value="0">
+							<div style="clear:both;">
+							</div>
+						
+					
+					</div>
+
+					<div class="notice" style="text-align:left;float:left;margin-left:26px;dispdlay:none;"><input type="radio" name="radio" value="1" onclick="rdvalue('All')" checked="checked">所有书刊<input type="radio" name="radio" value="2" onclick="rdvalue('01')">中文图书<input type="radio" name="radio" value="2" onclick="rdvalue('02')">西文图书<input type="radio" name="radio" value="2" onclick="rdvalue('11')">中文期刊<input type="radio" name="radio" value="2" onclick="rdvalue('12')">分类号<input type="radio" name="radio" value="2" onclick="rdvalue('西文期刊')">出版社</div>
+
+				</div>
+					<script>
+						function showchaoxing()
+						{
+							//隐藏
+							$("#searchtype").hide();
+							$("#searchtext").width(564);
+						}
+						function showgc()
+						{
+							
+							$("#searchtype").show();
+							$("#searchtext").width(458);
+						}
+					</script>			
+				<div class="fgdiv">&nbsp;</div>
+
+				
+				
+				<div class="xfq">
+					<div class="pic" style="background:url(/upload_files/other/gknew.png) no-repeat center 54%;"></div>
+					<div class="dtgk">					
+							<div class="pic2">					
+									<a href="http://library.shiep.edu.cn/list.php?fid=4" style="display:block;height:100%;"></a>
+							</div>	
+					</div>					
+					
+				</div>
+				<div class="fgdiv">&nbsp;</div>
+				<div class="qianshou">
+					
+					<!--动态背景-->
+					<div class="pic" style="background:url(/upload_files/other/dtt.png) no-repeat center 50%;"></div>
+					<div class="dtgk">
+							<div class="pic2">					
+									<ul>																
+										<div style="background:url(/images/i/1.gif) no-repeat 0px 2px;height:21px;text-indent:1.3em;"><a href="/bencandy.php?fid=2&amp;id=38920" target="_self" style=";font-weight:bold;">留学生参观体验临港</a></div><div style="background:url(/images/i/2.gif) no-repeat 0px 2px;height:21px;text-indent:1.3em;"><a href="/bencandy.php?fid=2&amp;id=38919" target="_self" style=";">图书馆2018国庆节期</a></div><div style="background:url(/images/i/3.gif) no-repeat 0px 2px;height:21px;text-indent:1.3em;"><a href="/bencandy.php?fid=2&amp;id=38918" target="_self" style=";">杨浦校区小白楼305考</a></div><div style="background:url(/images/i/4.gif) no-repeat 0px 2px;height:21px;text-indent:1.3em;"><a href="/bencandy.php?fid=2&amp;id=38917" target="_self" style=";">关于研讨室预约登录</a></div><div style="background:url(/images/i/5.gif) no-repeat 0px 2px;height:21px;text-indent:1.3em;"><a href="/bencandy.php?fid=2&amp;id=38916" target="_self" style=";">2018年临港校区考研</a></div><div style="background:url(/images/i/6.gif) no-repeat 0px 2px;height:21px;text-indent:1.3em;"><a href="/bencandy.php?fid=2&amp;id=38915" target="_self" style=";">图书馆学期初开放时</a></div>
+										<li><a href="/do/list.php?fid=1" class="xmore">MORE...</a></li>
+										<!-- 区域编号 -->
+										<input type="hidden" value="1">
+									</ul>
+							</div>					
+					</div>
+				</div>
+				<div style="clear:both;"></div>			
+		</div>
+		<div class="cnt_div">
+				<div class="jiqing">			
+
+						<div class="pic" style="background:url(/upload_files/other/1_20180719023501_2018719.jpg) no-repeat center 33%;">				
+						<div class="pic2">	
+						<a href="http://10.168.102.172:8086/TSDW/INDEX.ASPX" style="display:block;height:100%;" target="_blank"></a>								
+						</div>	
+						
+					</div>
+				</div>
+				<div class="fgdiv">&nbsp;</div>
+				<!-- 期刊导航 -->
+				<div class="qinzi">
+					<div class="pic" style="background:url(/upload_files/other/1_20161216015809_hxqk.jpg) no-repeat center 33%;">	
+
+							<div class="pic2">	
+									<a href="http://210.35.95.114/hxqk/corej.htm" style="display:block;height:100%;"></a>
+							</div>	
+											
+					</div>	
+				</div>
+				<div class="fgdiv">&nbsp;</div>			
+					<div id="source" class="portal_div">
+							<div style="width:50%;float:left;">								
+								<div id="sourcelog" style="background:url(/upload_files/other/1_20150119124554_source2.png) no-repeat 50% 38%;">
+<a href="http://library.shiep.edu.cn/list.php?fid=5" style="display:block;height:100%;width:100%;"></a>
+</div>
+							</div>
+							<div class="sourcewz">	
+								<ul>
+									<li><a href="/do/list.php?fid=5&amp;c=5">电子图书</a></li><li><a href="/do/list.php?fid=5&amp;c=6">电子期刊</a></li><li><a href="/do/list.php?fid=5&amp;c=7">学位论文</a></li><li><a href="/do/list.php?fid=5&amp;c=8">标准</a></li><li><a href="/do/list.php?fid=5&amp;c=9">多媒体资源</a></li><li><a href="/do/list.php?fid=5&amp;c=10">试用数据库</a></li>
+								</ul>
+							</div>					
+							<div class="arrow">
+									<a href="list.php?fid=5" style="display:block;height:100%;"></a>
+							</div>					
+					</div>
+				<div class="fgdiv">&nbsp;</div>
+
+				<div id="hd" class="portal_div" style="padding:0">
+					
+
+<script type="text/javascript">
+var widths=290;
+var heights=149;
+var counts=7;
+
+				img1=new Image ();img1.src='/upload_files/label/1_20170424104349_tuijian.png';
+				url1=new Image ();url1.src='http://library.shiep.edu.cn/do/bencandy.php?fid=141&id=38824&cvs=&pls=';
+				
+				img2=new Image ();img2.src='/upload_files/label/1_20160518101045_2.jpg';
+				url2=new Image ();url2.src='http://210.35.95.114/jczzzl14-15/jc14.htm';
+				
+				img3=new Image ();img3.src='/upload_files/label/1_20161010015511_jinguo.png';
+				url3=new Image ();url3.src='http://210.35.95.114/jinguo/index.html';
+				
+				img4=new Image ();img4.src='/upload_files/label/1_20141110090212_zhenren2.png';
+				url4=new Image ();url4.src='http://210.35.95.114/zhenren/zhenren.html';
+				
+				img5=new Image ();img5.src='/upload_files/label/1_20171211025211_mooc.jpg';
+				url5=new Image ();url5.src='http://210.35.95.114/mooc专栏/index.html';
+				
+				img6=new Image ();img6.src='/upload_files/label/1_20160615033617_主页.jpg';
+				url6=new Image ();url6.src='http://210.35.95.114/dushuyue2016/index.html';
+				
+				img7=new Image ();img7.src='/upload_files/label/1_20150902094014_welcome.jpg';
+				url7=new Image ();url7.src='http://210.35.95.114/fresh/index.html';
+				
+var nn=1;
+var key=0;
+function change_img()
+{if(key==0){key=1;}
+else if(document.all)
+{document.getElementById("pic").filters[0].Apply();document.getElementById("pic").filters[0].Play(duration=2);}
+eval('document.getElementById("pic").src=img'+nn+'.src');
+eval('document.getElementById("url").href=url'+nn+'.src');
+eval('document.getElementById("url").target="blank"');
+for (var i=1;i<=counts;i++){document.getElementById("xxjdjj"+i).className='axx';}
+document.getElementById("xxjdjj"+nn).className='bxx';
+nn++;if(nn>counts){nn=1;}
+tt=setTimeout('change_img()',4000);}
+function changeimg(n){nn=n;window.clearInterval(tt);change_img();}
+document.write('<style>');
+document.write('.axx{padding:1px 7px;border-left:#cccccc 1px solid;}');
+document.write('a.axx:link,a.axx:visited{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#666;}');
+document.write('a.axx:active,a.axx:hover{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#999;}');
+document.write('.bxx{padding:1px 7px;border-left:#cccccc 1px solid;}');
+document.write('a.bxx:link,a.bxx:visited{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#D34600;}');
+document.write('a.bxx:active,a.bxx:hover{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#D34600;}');
+document.write('</style>');
+document.write('<div style="width:'+widths+'px;height:'+heights+'px;overflow:hidden;text-overflow:clip;">');
+document.write('<div><a id="url"><img id="pic" style="border:0px;filter:progid:dximagetransform.microsoft.wipe(gradientsize=1.0,wipestyle=4, motion=forward)" width='+widths+' height='+heights+' /></a></div>');
+document.write('<div style="filter:alpha(style=1,opacity=10,finishOpacity=80);background: #888888;width:100%-2px;text-align:right;top:-12px;position:relative;margin:1px;height:12px;padding:0px;margin:0px;border:0px;">');
+for(var i=1;i<counts+1;i++){document.write('<a href="javascript:changeimg('+i+');" id="xxjdjj'+i+'" class="axx" target="_self">'+i+'</a>');}
+document.write('</div></div>');
+change_img();
+</script><style>.axx{padding:1px 7px;border-left:#cccccc 1px solid;}a.axx:link,a.axx:visited{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#666;}a.axx:active,a.axx:hover{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#999;}.bxx{padding:1px 7px;border-left:#cccccc 1px solid;}a.bxx:link,a.bxx:visited{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#D34600;}a.bxx:active,a.bxx:hover{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#D34600;}</style><div style="width:290px;height:149px;overflow:hidden;text-overflow:clip;"><div><a id="url" href="http://210.35.95.114/jinguo/index.html" target="blank"><img id="pic" style="border:0px;filter:progid:dximagetransform.microsoft.wipe(gradientsize=1.0,wipestyle=4, motion=forward)" width="290" height="149" src="http://library.shiep.edu.cn/upload_files/label/1_20161010015511_jinguo.png"></a></div><div style="filter:alpha(style=1,opacity=10,finishOpacity=80);background: #888888;width:100%-2px;text-align:right;top:-12px;position:relative;margin:1px;height:12px;padding:0px;margin:0px;border:0px;"><a href="javascript:changeimg(1);" id="xxjdjj1" class="axx" target="_self">1</a><a href="javascript:changeimg(2);" id="xxjdjj2" class="axx" target="_self">2</a><a href="javascript:changeimg(3);" id="xxjdjj3" class="bxx" target="_self">3</a><a href="javascript:changeimg(4);" id="xxjdjj4" class="axx" target="_self">4</a><a href="javascript:changeimg(5);" id="xxjdjj5" class="axx" target="_self">5</a><a href="javascript:changeimg(6);" id="xxjdjj6" class="axx" target="_self">6</a><a href="javascript:changeimg(7);" id="xxjdjj7" class="axx" target="_self">7</a></div></div>
+	
+	
+				</div>
+
+				<div style="clear:both;"></div>
+		</div>
+		<div class="cnt_div">
+				<div id="gk" class="portal_div">
+					<div class="pic" style="background:#307760 url(/upload_files/other/1_20150119010855_service2.png) no-repeat 50% 50%;"></div>
+					<div style="position:relative;top:-150px;height:150px;overflow:hidden;">
+				<div class="pic2">					
+									<ul>																
+
+<li><a href="/do/list.php?fid=100">研讨室预约</a></li>
+
+<li><a href="/do/list.php?fid=117">期刊导航</a></li>
+
+<li><a href="/do/list.php?fid=111">电院MOOC</a></li>
+
+<li><a href="/do/list.php?fid=116">活动报名</a></li>
+
+<li><a href="/do/list.php?fid=37">服务指引</a></li>
+
+<li><a href="/do/list.php?fid=38">借阅服务</a></li>
+
+										<li><a href="/do/list.php?fid=6" class="xmore">MORE...</a></li>
+									</ul>
+				</div>
+				</div>
+				</div>
+				<div class="fgdiv">&nbsp;</div>
+				<!--学位论文-->
+				<div class="miyue">
+					<div class="pic" style="background:url(/upload_files/other/1_20150121020753_lwlogo.jpg) no-repeat center 33%;">					
+<div class="pic2">					
+<a href="http://library.shiep.edu.cn/list.php?fid=13" style="display:block;height:100%;"></a>
+</div>
+</div>
+				</div>
+				<div class="fgdiv">&nbsp;</div>
+
+				<!--研讨室预约-->
+				<div class="relian">
+					<div class="pic" style="background:url(/upload_files/other/1_20150119022723_dzjg.png) no-repeat 15% 50%;">
+<div style="margin-top:50px;">
+	<a href="http://10.168.103.51:8080/asord/asord_hist.php" style="display:block;"><b>读者荐购</b></a>
+	<a href="http://10.168.103.51:8080/newbook/newbook_cls_browse.php" style="display:block;"><b>新书通报</b></a>
+</div>
+
+</div>
+				</div>
+				<!--咨询互动-->
+				<div class="qianshou2">		
+				
+				<div class="pic" style="background:url(/upload_files/other/1_20150121021040_zxhd.jpg) no-repeat center 33%;"></div>
+				
+				<div style="position:relative;top:-150px;height:150px;overflow:hidden;">
+				<div class="pic2" style="top: -150px;">					
+									<ul>																
+
+<li><a href="/do/list.php?fid=19">在线咨询</a></li>
+
+<li><a href="/do/list.php?fid=20">联系我们</a></li>
+
+<li><a href="/do/list.php?fid=21">新生专栏</a></li>
+
+<li><a href="/do/list.php?fid=73">调查问卷</a></li>
+
+										<li><a href="/do/list.php?fid=7" class="xmore">MORE...</a></li>
+									</ul>
+				</div>
+				</div>
+							
+					
+				</div>
+
+				<div style="clear:both;"></div>
+		<script language="JavaScript" src="/images/default/js/xxk.js"></script>
+<script>
+$("#sText2").val(0);
+$("#sText3").val(0);
+
+
+
+$(document).ready(function(){
+
+
+//alert('cccc');
+	/*
+	 var lgname='';
+	 var shuzu='';
+	 lgname=$(".qianshou .pic").css("background-image");
+	 lgname=lgname.replace("url(","");
+	 lgname=lgname.replace(")","");
+	
+	 shuzu=lgname.split('/',9);
+	//alert(shuzu);
+	*/
+	//$(".qianshou").find("a").each(function(){
+	//alert($(this).src);
+	})
+
+});
+</script>
+
+
+		</div>
+<script language="JavaScript">avoidgather('hotice');</script><!--
+-->
+<style>
+
+.selector
+{
+	float:left;
+	margin:10px 20px;
+}
+
+</style>
+<div id="footer" style="text-align:center;">	
+		<div style="width:85%;margin:auto;margin-top:10px;">	
+		
+			
+				<select class="selector" onchange="if(this.options[this.selectedIndex].value != ''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+				
+					<option class="selectorfirst" value="">--常用链接--
+
+</option><option value="http://www.csj.sh.edu.cn/html/index.html">长三角高校图书馆联盟</option>
+
+<option value="http://202.120.96.123/">上海高校外国教材中心</option>
+
+<option value="http://www.nlc.gov.cn/">中国国家图书馆</option>
+
+<option value="http://www.libnet.sh.cn/">上海图书馆</option>
+
+<option value="http://www.shelib.edu.cn/">上海教育网络图书馆</option>
+
+<option value="http://10.168.102.172:8086/TSDW/INDEX.ASPX">馆藏图书定位</option>
+
+<option value="http://10.168.103.51:8080/reader/login.php">读者借还查询</option>
+
+<option value="http://10.168.103.51:8080/opac">馆藏图书查询</option>
+
+<option value="http://print.shiep.edu.cn/xabprint/Login.aspx">自助复印打印</option>
+
+				</select>	
+			
+				<select class="selector" onchange="if(this.options[this.selectedIndex].value != ''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+				
+					<option class="selectorfirst" value="">--校内链接--
+
+</option><option value="http://www.shiep.edu.cn/">上海电力学院</option>
+
+<option value="http://ids.shiep.edu.cn/authserver/login?service=http%3A%2F%2Fportal.shiep.edu.cn%2F">上海电力学院校园网信息门户</option>
+
+<option value="http://kyc.web.shiep.edu.cn/test20/main.asp">上海电力学院科研处</option>
+
+<option value="http://yjsc.web.shiep.edu.cn/web/index.asp">上海电力学院研究生处</option>
+
+<option value="http://mail.shiep.edu.cn/">上海电力学院邮件服务</option>
+
+<option value="https://vpn.shiep.edu.cn/">VPN（非校园网IP入口）</option>
+
+				</select>	
+			
+				<select class="selector" onchange="if(this.options[this.selectedIndex].value != ''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+				
+					<option class="selectorfirst" value="">--常用软件下载--
+
+</option><option value="http://library.shiep.edu.cn/download/AdbeRdr11000_zh_CN11.0.0.379.1410747856.exe">Adobe Acrobat</option>
+
+<option value="http://library.shiep.edu.cn/download/ssreader5.4.6791.exe">超星SSReader</option>
+
+<option value="http://library.shiep.edu.cn/download/CAJViewer 7.2.self.exe">CAJViewer</option>
+
+<option value="http://library.shiep.edu.cn/download/检索证明_模板.doc">论文收录证明模板</option>
+
+<option value="http://library.shiep.edu.cn/download/2016纸质期刊清单.xlsx">2016纸质期刊清单</option>
+
+				</select>	
+			
+				<select class="selector" onchange="if(this.options[this.selectedIndex].value != ''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+				
+					<option class="selectorfirst" value="">--非校园网IP入口链接--
+
+</option><option value="https://vpn.shiep.edu.cn/prx/000/http/localhost/login">VPN</option>
+
+				</select>	
+					
+			
+			<div style="clear:both"></div>
+		</div>
+			<div id="copy">上海电力学院图书馆 版权所有2013</div>
+</div>
+				
+	<script src="/images/default/js/zzsc.js"></script>
+<script language="JavaScript" src="/do/count.php?fid=1"></script><script language="JavaScript" src="http://library.shiep.edu.cn/count/count.php?fid=1&amp;nowurl=http%3A//library.shiep.edu.cn/&amp;fromurl=&amp;windows_lang=undefined&amp;screen_size=1280*800"></script>
+<script language="JavaScript">
+<!--
+document.write('<div style="display:none;"><iframe src="http://library.shiep.edu.cn/do/click.php?job=job_fid&fid=&aid=" width=0 height=0></iframe></div>');
+//-->
+</script><div style="display:none;"><iframe src="http://library.shiep.edu.cn/do/click.php?job=job_fid&amp;fid=&amp;aid=" width="0" height="0"></iframe></div>
+<script>
+var lefthigh='';
+lefthigh=$("#left").height();
+$(".Main").height(lefthigh);
+
+var listdh='';
+var nav_guide='';
+listdh=$("#listdh1").height();
+nav_guide=$("#nav_guide").height();
+
+$("#view_article").height(lefthigh-listdh);
+$(".cntscroll").css({"width":$(".Main").width(),"height":lefthigh-listdh});
+//$(".mCSB_draggerRail").height(lefthigh-60);
+
+/****js滚动条****/
+(function($){
+	$(window).load(function(){
+		$(".cntscroll").mCustomScrollbar({
+		axis:"y",
+		theme:"dark"
+		});
+	});
+})(jQuery);
+
+function show_db(div,id,type,page,rows,o,d){
+	if(get_obj(div)){
+		AJAX.get(div,"/do/get_db.php?nid=&order_by="+o+"&desc_="+d+"&page="+page+"&type="+type+"&id_sort="+id+"&rows=20&div="+div);
+	}
+}
+</script>
+</div>
+
+
+</div></body></html>
