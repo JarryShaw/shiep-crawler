@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import json
 import os
 import pprint
 import re
@@ -12,12 +13,13 @@ import requests
 
 def crawler(link):
     file = f'{re.sub(r"[:/]+", r"_", link)}.html'
-    if not os.path.exists(file) and link.endswith(f'{root}/'):
+    path = f'html/{file}'
+    if not os.path.exists(path) and link.endswith(f'{root}/'):
         webbrowser.open(link)
         input(f'Waiting for {file!r}, press Enter to continue...')
-    if os.path.isfile(file):
-        with open(file) as file:
-            text = file.read()
+    if os.path.isfile(path):
+        with open(path) as html:
+            text = html.read()
     else:
         try:
             text = requests.get(link).text
@@ -33,6 +35,8 @@ def crawler(link):
         netloc = rst.netloc.decode() if isinstance(rst.netloc, bytes) else rst.netloc
         if root in netloc:
             href.append(url)
+        elif 'http' in scheme:
+            continue
         else:
             href.append(f'http://www.{root}/{url.lstrip("/")}')
     return set(href)
@@ -75,4 +79,6 @@ for url in href:
     link.add(f'{scheme}://{netloc}/')
 
 pprint.pprint(link)
+with open('domain.json', 'w') as file:
+    json.dump(list(link), file, indent=4)
 # re.findall(r'http://[a-zA-Z0-9/.?&;]*\.shiep\.edu\.cn/[a-zA-Z0-9/.?&;]*', text)
