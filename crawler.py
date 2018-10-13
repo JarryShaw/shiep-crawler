@@ -3,8 +3,7 @@
 import json
 import os
 import pprint
-import re
-import urllib
+import urllib.parse
 import webbrowser
 
 import bs4
@@ -12,7 +11,7 @@ import requests
 
 
 def crawler(link):
-    file = f'{re.sub(r"[:/]+", r"_", link)}.html'
+    file = f'{urllib.parse.urlparse(link).netloc}.html'
     path = f'html/{file}'
     if not os.path.exists(path) and link.endswith(f'{root}/'):
         webbrowser.open(link)
@@ -74,11 +73,10 @@ print('-'*10)
 link = set()
 for url in href:
     rst = urllib.parse.urlparse(url)
-    scheme = rst.scheme.decode() if isinstance(rst.scheme, bytes) else rst.scheme
     netloc = rst.netloc.decode() if isinstance(rst.netloc, bytes) else rst.netloc
-    link.add(f'{scheme}://{netloc}/')
+    link.add(netloc)
 
 pprint.pprint(link)
 with open('domain.json', 'w') as file:
-    json.dump(list(link), file, indent=4)
+    json.dump(list(sorted(link)), file, indent=4)
 # re.findall(r'http://[a-zA-Z0-9/.?&;]*\.shiep\.edu\.cn/[a-zA-Z0-9/.?&;]*', text)

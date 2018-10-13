@@ -2,22 +2,20 @@
 
 import json
 import subprocess
-import urllib.parse
 
 with open('domain.json') as file:
     link = json.load(file)
 
 ip = set()
-for url in link:
-    host = urllib.parse.urlparse(url).netloc
+for host in link:
     try:
         stdout = subprocess.check_output(['dnsget', host], stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError:
-        print(url, 'failed')
+        print(host, 'failed')
         continue
     address = stdout.split()[-1].decode()
     ip.add(address)
-    print(url, address)
+    print(host, address)
 
 with open('ip.json', 'w') as file:
-    json.dump(list(ip), file, indent=4)
+    json.dump(list(sorted(ip)), file, indent=4)
