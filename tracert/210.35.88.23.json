@@ -1,0 +1,114 @@
+[
+    {
+        "Hop": "3",
+        "Time": "1.247",
+        "Host": "gateway.whatismyipaddress.com",
+        "IP": "66.171.248.161",
+        "Location": "Costa Mesa, California, United States"
+    },
+    {
+        "Hop": "4",
+        "Time": "0.456",
+        "Host": "66-171-255-233.alchemy.net",
+        "IP": "66.171.255.233",
+        "Location": "Mission Viejo, California, United States"
+    },
+    {
+        "Hop": "5",
+        "Time": "0.686",
+        "Host": "66-171-255-225.alchemy.net",
+        "IP": "66.171.255.225",
+        "Location": "Mission Viejo, California, United States"
+    },
+    {
+        "Hop": "6",
+        "Time": "2.225",
+        "Host": "fdr1-ge.alchemy.net",
+        "IP": "66.186.30.101",
+        "Location": "Tarzana, California, United States"
+    },
+    {
+        "Hop": "7",
+        "Time": "2.643",
+        "Host": "ix-xe-2-0-2-2-0.tcore1.lvw-los-angeles.as6453.net",
+        "IP": "66.110.59.252",
+        "Location": "United States"
+    },
+    {
+        "Hop": "8",
+        "Time": "155.205",
+        "Host": "if-ae-2-2.tcore2.lvw-los-angeles.as6453.net",
+        "IP": "66.110.59.2",
+        "Location": "United States"
+    },
+    {
+        "Hop": "9",
+        "Time": "103.557",
+        "Host": "if-et-20-2.hcore2.kv8-chiba.as6453.net",
+        "IP": "64.86.252.217",
+        "Location": "United States"
+    },
+    {
+        "Hop": "10",
+        "Time": "116.17",
+        "Host": "if-et-1-2.hcore1.kv8-chiba.as6453.net",
+        "IP": "120.29.211.2",
+        "Location": "Japan"
+    },
+    {
+        "Hop": "11",
+        "Time": "162.032",
+        "Host": "if-ae-17-2.tcore1.hk2-hong-kong.as6453.net",
+        "IP": "116.0.67.61",
+        "Location": "Central, Central and Western District, Hong Kong"
+    },
+    {
+        "Hop": "12",
+        "Time": "155.035",
+        "Host": "180.87.112.110",
+        "IP": "180.87.112.110",
+        "Location": "Central, Central and Western District, Hong Kong"
+    },
+    {
+        "Hop": "13",
+        "Time": "174.204",
+        "Host": "101.4.117.249",
+        "IP": "101.4.117.249",
+        "Location": "China"
+    },
+    {
+        "Hop": "14",
+        "Time": "170.306",
+        "Host": "101.4.118.121",
+        "IP": "101.4.118.121",
+        "Location": "China"
+    },
+    {
+        "Hop": "15",
+        "Time": "176.26",
+        "Host": "101.4.117.253",
+        "IP": "101.4.117.253",
+        "Location": "China"
+    },
+    {
+        "Hop": "16",
+        "Time": "174.822",
+        "Host": "101.4.114.173",
+        "IP": "101.4.114.173",
+        "Location": "China"
+    },
+    {
+        "Hop": "17",
+        "Time": "206.792",
+        "Host": "101.4.115.173",
+        "IP": "101.4.115.173",
+        "Location": "China"
+    },
+    {
+        "Hop": "21",
+        "Time": "N/A",
+        "Host": "210.35.88.23",
+        "IP": "210.35.88.23",
+        "Location": "Shanghai, China"
+    }
+]

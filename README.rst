@@ -12,4 +12,4 @@ System Security Evaluation* (SJTU 4th Grade).
 - ``ip.json`` is the DNS query result
 - ``route.csv`` is the traceroute result
 - HTML files are corresponding SHIEP webpages
-- other TXT files are traceroute JSON format results
+- other JSON files are corresponding traceroute results

@@ -1,0 +1,86 @@
+[
+    {
+        "Hop": "3",
+        "Time": "2.622",
+        "Host": "gateway.whatismyipaddress.com",
+        "IP": "66.171.248.161",
+        "Location": "Costa Mesa, California, United States"
+    },
+    {
+        "Hop": "4",
+        "Time": "0.472",
+        "Host": "66-171-255-233.alchemy.net",
+        "IP": "66.171.255.233",
+        "Location": "Mission Viejo, California, United States"
+    },
+    {
+        "Hop": "5",
+        "Time": "0.873",
+        "Host": "9-2-36.ear3.tustin1.level3.net",
+        "IP": "4.16.200.25",
+        "Location": "Costa Mesa, California, United States"
+    },
+    {
+        "Hop": "6",
+        "Time": "12.315",
+        "Host": "ae-3-19.edge2.sanjose3.level3.net",
+        "IP": "4.69.209.189",
+        "Location": "United States"
+    },
+    {
+        "Hop": "7",
+        "Time": "74.115",
+        "Host": "china-telec.edge2.sanjose3.level3.net",
+        "IP": "4.53.210.210",
+        "Location": "Milpitas, California, United States"
+    },
+    {
+        "Hop": "8",
+        "Time": "70.045",
+        "Host": "202.97.50.73",
+        "IP": "202.97.50.73",
+        "Location": "China"
+    },
+    {
+        "Hop": "10",
+        "Time": "247.886",
+        "Host": "202.97.84.213",
+        "IP": "202.97.84.213",
+        "Location": "China"
+    },
+    {
+        "Hop": "12",
+        "Time": "214.011",
+        "Host": "202.97.54.26",
+        "IP": "202.97.54.26",
+        "Location": "China"
+    },
+    {
+        "Hop": "14",
+        "Time": "238.796",
+        "Host": "222.85.75.206",
+        "IP": "222.85.75.206",
+        "Location": "Zhengzhou, Henan, China"
+    },
+    {
+        "Hop": "15",
+        "Time": "281.824",
+        "Host": "90.123.85.222.broad.zz.ha.dynamic.163data.com.cn",
+        "IP": "222.85.123.90",
+        "Location": "Zhengzhou, Henan, China"
+    },
+    {
+        "Hop": "16",
+        "Time": "278.878",
+        "Host": "219.147.63.218",
+        "IP": "219.147.63.218",
+        "Location": "Henan, China"
+    },
+    {
+        "Hop": "18",
+        "Time": "262.907",
+        "Host": "116.255.235.199",
+        "IP": "116.255.235.199",
+        "Location": "Beijing, China"
+    }
+]

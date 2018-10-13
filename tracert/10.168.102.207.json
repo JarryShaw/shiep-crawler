@@ -1,0 +1,23 @@
+[
+    {
+        "Hop": "3",
+        "Time": "0.967",
+        "Host": "gateway.whatismyipaddress.com",
+        "IP": "66.171.248.161",
+        "Location": "Costa Mesa, California, United States"
+    },
+    {
+        "Hop": "4",
+        "Time": "0.427",
+        "Host": "66-171-255-233.alchemy.net",
+        "IP": "66.171.255.233",
+        "Location": "Mission Viejo, California, United States"
+    },
+    {
+        "Hop": "5",
+        "Time": "N/A",
+        "Host": "10.168.102.207",
+        "IP": "10.168.102.207",
+        "Location": ""
+    }
+]
