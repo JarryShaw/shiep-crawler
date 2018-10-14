@@ -1,23 +1,107 @@
-[
-    "10.168.102.207",
-    "10.168.102.23",
-    "10.168.102.50",
-    "10.168.103.76",
-    "116.255.235.199",
-    "123.58.178.130",
-    "210.35.88.141",
-    "210.35.88.158",
-    "210.35.88.173",
-    "210.35.88.194",
-    "210.35.88.195",
-    "210.35.88.199",
-    "210.35.88.200",
-    "210.35.88.208",
-    "210.35.88.23",
-    "210.35.88.35",
-    "210.35.88.51",
-    "210.35.88.70",
-    "210.35.95.100",
-    "210.35.95.112",
-    "210.35.95.65"
-]
+{
+    "210.35.88.200": [
+        "65.shiep.edu.cn",
+        "dqxy.shiep.edu.cn",
+        "energy.shiep.edu.cn",
+        "gjjlxy.shiep.edu.cn",
+        "hhxy.shiep.edu.cn",
+        "jgxy.shiep.edu.cn",
+        "jjxy.shiep.edu.cn",
+        "jsjxy.shiep.edu.cn",
+        "lgxq.shiep.edu.cn",
+        "skb.shiep.edu.cn",
+        "slxy.shiep.edu.cn",
+        "smart-grid.shiep.edu.cn",
+        "tyb.shiep.edu.cn",
+        "wenming.shiep.edu.cn",
+        "wgyxy.shiep.edu.cn",
+        "xxgk.shiep.edu.cn",
+        "ydyl.shiep.edu.cn",
+        "yjzx.shiep.edu.cn",
+        "zdhxy.shiep.edu.cn"
+    ],
+    "210.35.88.23": [
+        "archives.web.shiep.edu.cn",
+        "english.shiep.edu.cn",
+        "news.shiep.edu.cn",
+        "www.shiep.edu.cn"
+    ],
+    "210.35.88.199": [
+        "bwc.shiep.edu.cn",
+        "cwc.shiep.edu.cn",
+        "cyb.shiep.edu.cn",
+        "dangban.shiep.edu.cn",
+        "fao.shiep.edu.cn",
+        "fzghc.shiep.edu.cn",
+        "gonghui.shiep.edu.cn",
+        "hqglc.shiep.edu.cn",
+        "jgdw.shiep.edu.cn",
+        "jijian.shiep.edu.cn",
+        "jjc.shiep.edu.cn",
+        "jwc.shiep.edu.cn",
+        "kyc.shiep.edu.cn",
+        "metc.shiep.edu.cn",
+        "office.shiep.edu.cn",
+        "rsc.shiep.edu.cn",
+        "sjc.shiep.edu.cn",
+        "sysyzcglc.shiep.edu.cn",
+        "tw.shiep.edu.cn",
+        "xcb.shiep.edu.cn",
+        "yjsc.shiep.edu.cn",
+        "zzb.shiep.edu.cn"
+    ],
+    "10.168.102.207": [
+        "ddh.shiep.edu.cn"
+    ],
+    "210.35.88.141": [
+        "dwgk.shiep.edu.cn"
+    ],
+    "210.35.88.195": [
+        "dwllc.shiep.edu.cn"
+    ],
+    "210.35.95.100": [
+        "dxxy.shiep.edu.cn"
+    ],
+    "10.168.103.76": [
+        "ecard.shiep.edu.cn"
+    ],
+    "10.168.102.23": [
+        "eutv.shiep.edu.cn"
+    ],
+    "116.255.235.199": [
+        "heart.shiep.edu.cn"
+    ],
+    "210.35.88.70": [
+        "jpkc.shiep.edu.cn"
+    ],
+    "210.35.88.173": [
+        "jsjxfzzx.shiep.edu.cn"
+    ],
+    "210.35.95.65": [
+        "jw.shiep.edu.cn"
+    ],
+    "210.35.95.112": [
+        "library.shiep.edu.cn"
+    ],
+    "210.35.88.208": [
+        "mobile.shiep.edu.cn"
+    ],
+    "210.35.88.51": [
+        "portal.shiep.edu.cn"
+    ],
+    "10.168.102.50": [
+        "sztz.shiep.edu.cn"
+    ],
+    "210.35.88.35": [
+        "vpn.shiep.edu.cn"
+    ],
+    "123.58.178.130": [
+        "webmail.shiep.edu.cn"
+    ],
+    "210.35.88.158": [
+        "xsc.shiep.edu.cn"
+    ],
+    "210.35.88.194": [
+        "zs.shiep.edu.cn"
+    ]
+}

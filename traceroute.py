@@ -11,7 +11,7 @@ with open('ip.json') as file:
     address = json.load(file)
 
 results = list()
-for ip in address:
+for ip in sorted(address):
     name = f'tracert/{ip}.json'
     if os.path.isfile(name):
         with open(name) as file:

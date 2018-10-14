@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
+import collections
 import json
 import subprocess
 
 with open('domain.json') as file:
     link = json.load(file)
 
-ip = set()
+ip = collections.defaultdict(list)
 for host in link:
     try:
         stdout = subprocess.check_output(['dnsget', host], stderr=subprocess.DEVNULL)
@@ -14,8 +15,8 @@ for host in link:
         print(host, 'failed')
         continue
     address = stdout.split()[-1].decode()
-    ip.add(address)
+    ip[address].append(host)
     print(host, address)
 
 with open('ip.json', 'w') as file:
-    json.dump(list(sorted(ip)), file, indent=4)
+    json.dump(ip, file, indent=4)
